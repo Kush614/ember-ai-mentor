@@ -69,6 +69,12 @@ export default function Home() {
               Pre-built, differentiated lessons from kindergarten to high school. Pick a course — each one is
               already saved for below, at, and above-grade students. Loads instantly.
             </p>
+            <a
+              href="#/about"
+              className="inline-block mt-4 gum-btn rounded-full bg-black text-white px-4 py-2 text-sm font-bold no-underline"
+            >
+              ✦ About Ember →
+            </a>
           </div>
 
           {/* course catalog by grade band */}

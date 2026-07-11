@@ -4,7 +4,7 @@
 
 Ember is a memory-first, self-learning tutoring agent. Unlike ordinary AI tutors that answer a question and forget you, Ember **learns each student as a person over time**, shows you exactly what it remembers, and knows when a teacher, parent, or classmate will help more than an AI.
 
-**🌐 Live:** **[ember.butterbase.dev](https://ember.butterbase.dev)**
+**🌐 Live:** **[ember.butterbase.dev](https://ember.butterbase.dev)** · **📖 About page:** **[ember.butterbase.dev/#/about](https://ember.butterbase.dev/#/about)**
 
 Built for the **AI for Education Hackathon @ Stanford** · track *Autonomous Learning Agents*.
 

@@ -7,6 +7,7 @@ import Teacher from "./components/Teacher";
 import Reset from "./components/Reset";
 import EmberDot from "./components/EmberDot";
 import Home from "./modes/Home";
+import About from "./modes/About";
 import MemoryReveal from "./modes/MemoryReveal";
 import Scaffold from "./modes/Scaffold";
 import Viva from "./modes/Viva";
@@ -45,6 +46,7 @@ export default function App() {
 
   if (route === "/teach") return <Teacher />;
   if (route === "/reset") return <Reset />;
+  if (route === "/about") return <About />; // public — no login needed
   if (!learner) return <Login />;
 
   // Ember suite (all reuse Butterbase auth + EverOS memory + Claude proxy)
