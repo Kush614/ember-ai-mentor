@@ -36,11 +36,64 @@ Ember runs three agents on every exchange:
 
 ---
 
+## 🧬 Powered by EverMind (EverOS)
+
+Memory in Ember isn't a database table — it's **[EverOS](https://evermind.ai)**, EverMind's memory layer for agents. Ember feeds EverOS raw conversation; EverOS extracts durable **episodic memories** and a **student profile** (categorized facts, each with the evidence it was drawn from), which Ember recalls semantically before every reply. All five agents share the same memory, so learning in one carries to all.
+
+```mermaid
+flowchart LR
+    U([Student]) -->|message| M[Mentor / any of 5 agents]
+    M -->|reply| U
+    M -. after every exchange .-> O[Observer]
+    O -->|ingest| EV[(EverOS memory)]
+    EV -->|LLM extraction| F[Episodic memories + profile facts]
+    M ==>|recall before each reply| EV
+    EV ==>|memory digest| M
+    EV --> MR[Memory Reveal UI]
+    EV -. same key · shared substrate .-> RV[Raven agent]
+```
+
+Ember calls EverOS through a **Butterbase serverless function** (`/fn/everos`) so the API key never ships in the browser:
+
+| Op | EverOS endpoint | Used by |
+|---|---|---|
+| `ingest` | `POST /api/v1/memories` | the Observer, after every exchange |
+| `recall` | `POST /api/v1/memories/search` (hybrid) | every agent, before it replies |
+| `dump`   | `POST /api/v1/memories/get` (episodic + profile) | the Memory Reveal view |
+| `flush`  | `POST /api/v1/memories/flush` | force extraction at session end |
+
+Seed history for all 6 students (K-12 → HS) is pre-ingested into EverOS, so recall is real from the very first interaction. Adapter: [`src/lib/everos.ts`](src/lib/everos.ts) · proxy: [`functions/everos.js`](functions/everos.js).
+
+---
+
 ## 🧠 Memory Reveal — open the memory
 
 A dedicated view shows *exactly* what Ember stored and recalls for each student, straight from EverOS: extracted **facts** (with the evidence quote), a **session-episode timeline**, **concept-mastery** bars, and a **live recall** box that runs the same search the Mentor does before every reply.
 
 ![Memory Reveal — extracted facts, episodes, and live recall](shots/04-memory.png)
+
+---
+
+## 🏆 EverMind bounties — and how Ember solves each
+
+### 🥇 Best Memory Reveal — *open the memory; show what your build stored and recalled*
+The **Memory Reveal** tab (`#/memory`, screenshot above) opens EverOS directly: categorized **facts with their evidence quotes**, a **session-episode timeline**, **concept-mastery** bars, and a **live recall** box that runs the exact search the Mentor uses before every reply. It's not chat history — it's the durable understanding EverOS formed about the student, made visible.
+
+### 🥇 Best Cross-Session Moment — *"because it remembered X, this time it did Y"*
+Memory persists in EverOS across logins. Pick **Maya → Mentor**: it greets her referencing a *past* session ("the soccer-ratio trick that finally clicked"), then teaches today's topic *with a soccer analogy* — **because** it remembered soccer is how she learns. An early-session fact directly changes later-session behavior, live on screen.
+
+### 🥇 Best Self-Evolving Memory — *change something mid-demo; let the agent adapt*
+Mid-chat, change the signal — say *"this is way too easy, skip ahead,"* act bored, or give a couple of wrong answers. The **Observer** writes the change to EverOS and updates mastery in real time; hit **↻ Refresh** on the Memory Reveal and the new fact/episode is there. The memory visibly evolved from what the student just did — no redeploy, no reset.
+
+### 🐦 Bonus — Build on Raven
+[Raven](https://raven.evermind.ai) is EverMind's self-improving agent harness, built on the **same EverOS substrate** Ember uses. Because Ember writes memory to EverOS under stable learner ids (e.g. `maya-r-7g`), a Raven agent pointed at the same key **shares Ember's memory** — two different agents, one memory-first brain:
+
+```bash
+curl -fsSL https://raven.evermind.ai/install.sh | bash
+export EVEROS_API_KEY=<the same key Ember uses>
+raven agent -m "What do you remember about the student maya-r-7g?"
+# → recalls the soccer / Ms. Rivera / math-team facts Ember stored
+```
 
 ---
 
