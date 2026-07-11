@@ -1,0 +1,44 @@
+{
+  "name": "ember initial schema",
+  "dry_run": false,
+  "schema": {
+    "tables": {
+      "learners": {
+        "_seed": true,
+        "columns": {
+          "id": { "type": "text", "primary": true },
+          "email": { "type": "text", "unique": true },
+          "display_name": { "type": "text", "nullable": false },
+          "role": { "type": "text", "default": "'student'" },
+          "grade": { "type": "text" },
+          "created_at": { "type": "timestamptz", "default": "now()" }
+        }
+      },
+      "transcripts": {
+        "columns": {
+          "id": { "type": "uuid", "primary": true, "default": "gen_random_uuid()" },
+          "learner_id": { "type": "text", "nullable": false },
+          "session_id": { "type": "text", "nullable": false },
+          "role": { "type": "text", "nullable": false },
+          "content": { "type": "text", "nullable": false },
+          "ts": { "type": "timestamptz", "default": "now()" }
+        },
+        "indexes": {
+          "idx_transcripts_learner": { "columns": ["learner_id", "session_id"] }
+        }
+      },
+      "connector_events": {
+        "columns": {
+          "id": { "type": "uuid", "primary": true, "default": "gen_random_uuid()" },
+          "learner_id": { "type": "text", "nullable": false },
+          "rule_fired": { "type": "text", "nullable": false },
+          "card_json": { "type": "jsonb", "nullable": false },
+          "ts": { "type": "timestamptz", "default": "now()" }
+        },
+        "indexes": {
+          "idx_connector_events_learner": { "columns": ["learner_id"] }
+        }
+      }
+    }
+  }
+}

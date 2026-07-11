@@ -1,0 +1,470 @@
+[
+  {
+    "id": "m1",
+    "band": "Early Elementary",
+    "grades": "K–2",
+    "concept": "Counting to 100",
+    "intro": "Counting to 100 means saying the numbers in order, one after another, all the way to one hundred!",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Students count to 20 by ones with support and touch each object as they count.",
+        "activity": "Give the student 10 counting bears and have them touch and count each one aloud from 1 to 10. Repeat with 20 bears, saying each number together with the student."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Students count to 100 by ones and start recognizing tens patterns.",
+        "activity": "Have the student count aloud from 1 to 100 using a 100-chart, pointing to each number as they go. Then ask them to circle every number ending in 0 and read those aloud: 10, 20, 30, and so on."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Students count to 100 by ones, tens, and fives, and can start from any number.",
+        "activity": "Ask the student to skip-count to 100 by tens, then by fives, saying each number aloud. Then give a starting number like 47 and have them count on to 60 without a chart."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "Count these 10 dots out loud and tell me the last number you say."
+      },
+      {
+        "tier": "at",
+        "question": "What number comes right after 89 when you count to 100?"
+      },
+      {
+        "tier": "above",
+        "question": "Start at 35 and count by tens. What are the next three numbers you say?"
+      }
+    ],
+    "misconception": "Students often skip the tricky decade transitions, like saying '28, 29, 20' instead of '28, 29, 30.'"
+  },
+  {
+    "id": "m2",
+    "band": "Early Elementary",
+    "grades": "K–2",
+    "concept": "Addition within 20",
+    "intro": "Addition means putting two groups of things together to find out how many you have in all.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Adding two small numbers with sums up to 10 using objects you can touch and count.",
+        "activity": "Give the student a pile of 10 counters and ask them to make groups like 3 and 4, then push them together and count all. Repeat with new numbers, always letting them touch and count each object."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Adding two numbers within 20 by counting on from the larger number.",
+        "activity": "Say a problem like 8 + 5 and have the student put 8 in their head and count up 5 more on their fingers to reach 13. Practice several, encouraging them to start with the bigger number."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Adding within 20 using make-a-ten strategies and finding missing addends.",
+        "activity": "Give problems like 9 + 6 and ask the student to break 6 into 1 and 5 to make 10, then add (10 + 5 = 15). Then challenge them with missing-number problems like 7 + ___ = 15."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "You have 4 red blocks and 3 blue blocks. How many blocks in all?"
+      },
+      {
+        "tier": "at",
+        "question": "Count on to solve: 9 + 4 = ?"
+      },
+      {
+        "tier": "above",
+        "question": "Use make-a-ten to solve 8 + 7, then find the missing number: 6 + ___ = 14."
+      }
+    ],
+    "misconception": "Students often start counting from one instead of counting on from the larger number, or they count the starting number twice."
+  },
+  {
+    "id": "m3",
+    "band": "Early Elementary",
+    "grades": "K–2",
+    "concept": "2D shapes",
+    "intro": "A 2D shape is a flat shape you can draw on paper, like a circle, square, triangle, or rectangle.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Students recognize and name basic 2D shapes by sight.",
+        "activity": "Lay out cutouts of a circle, square, and triangle on the table. Ask the student to point to and name each shape as you call it out."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Students identify 2D shapes by counting their sides and corners.",
+        "activity": "Give students paper shapes and have them count the sides and corners of each one. Ask them to sort the shapes into groups that have the same number of sides."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Students describe and compare 2D shapes using attributes and find them in the real world.",
+        "activity": "Have students go on a shape hunt around the classroom and record each object with its shape name. Ask them to explain how they know, using words like 'sides' and 'corners.'"
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "Point to the triangle: which shape has 3 straight sides?"
+      },
+      {
+        "tier": "at",
+        "question": "How many sides and how many corners does a square have?"
+      },
+      {
+        "tier": "above",
+        "question": "Name two ways a square and a rectangle are the same and one way they are different."
+      }
+    ],
+    "misconception": "Students often think a shape is only that shape if it points a certain way, so they don't recognize a rotated square or triangle as the same shape."
+  },
+  {
+    "id": "m4",
+    "band": "Upper Elementary",
+    "grades": "3–5",
+    "concept": "Multiplication facts",
+    "intro": "Multiplication is a fast way to add the same number over and over, like 3 groups of 4 making 12.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Students build multiplication as repeated addition and skip counting using small factors.",
+        "activity": "Give each student counters and ask them to build 2, 3, and 5 times tables by making equal groups. Have them write the matching addition and multiplication sentence for each group, like 4+4+4=12 and 3x4=12."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Students recall multiplication facts through 10x10 with fluency and accuracy.",
+        "activity": "Play a 3-minute timed fact fluency round where students solve mixed facts from 0-10 on a grid. Then have partners quiz each other on the facts they missed and record two strategies (like doubling for 4s) to remember them."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Students apply and extend facts to multi-digit and missing-factor problems.",
+        "activity": "Pose problems like 7 x __ = 63 and 12 x 8, asking students to explain their reasoning using the distributive property (12x8 = 10x8 + 2x8). Have them create one two-step word problem using multiplication for a classmate to solve."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "Draw 3 groups of 5 and write the multiplication fact it shows."
+      },
+      {
+        "tier": "at",
+        "question": "Solve: 6 x 7 = ___ and 8 x 9 = ___."
+      },
+      {
+        "tier": "above",
+        "question": "Find the missing factor: 9 x ___ = 72, and explain how you solved 13 x 6."
+      }
+    ],
+    "misconception": "Students often confuse multiplication with addition and write 3x4 as 7 instead of 12."
+  },
+  {
+    "id": "m5",
+    "band": "Upper Elementary",
+    "grades": "3–5",
+    "concept": "Understanding fractions",
+    "intro": "A fraction shows equal parts of a whole, like cutting a pizza into slices and counting how many you have.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Fractions name equal parts of one whole using a top and bottom number.",
+        "activity": "Give students paper strips and have them fold each into 2, 3, or 4 equal parts, then color one part and name it (like 1/4). Ask them to point to which fraction is bigger by comparing the colored pieces side by side."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Fractions represent parts of a whole and can be compared or found equivalent using common benchmarks.",
+        "activity": "Have students draw fraction bars to show pairs like 2/4 and 1/2, then explain in writing why they are equivalent. Then order a set of fractions such as 1/3, 1/2, and 3/4 from least to greatest using their models."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Fractions can be compared, added, and related to whole numbers and mixed numbers using reasoning about equivalent parts.",
+        "activity": "Give students a word problem where they must add fractions with unlike denominators, such as 1/2 + 1/3 of a garden, and justify their answer with a diagram. Then challenge them to write their own real-world fraction problem and swap it with a partner to solve."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "A pizza is cut into 4 equal slices and you eat 1 slice. Write the fraction of pizza you ate."
+      },
+      {
+        "tier": "at",
+        "question": "Which is greater, 2/3 or 1/2? Draw a picture or explain how you know."
+      },
+      {
+        "tier": "above",
+        "question": "Maria ate 1/4 of a cake and Sam ate 1/3 of the same cake. How much did they eat together, and how much is left?"
+      }
+    ],
+    "misconception": "Students often think a fraction with a larger bottom number is always bigger, not realizing more parts means each part is smaller."
+  },
+  {
+    "id": "m6",
+    "band": "Upper Elementary",
+    "grades": "3–5",
+    "concept": "Area & perimeter",
+    "intro": "Perimeter is the distance all the way around a shape, and area is the amount of flat space inside it.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Students count unit squares to find area and count edge units to find perimeter on a grid.",
+        "activity": "Give students grid paper with rectangles already drawn and have them count the squares inside for area. Then have them trace and count the units around the edge for perimeter."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Students use the formulas area = length × width and perimeter = 2 × (length + width) for rectangles.",
+        "activity": "Provide rectangles with labeled side lengths and have students calculate both area and perimeter using the formulas. Then ask them to draw a rectangle with an area of 24 square units."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Students solve for missing dimensions and compare shapes with the same area but different perimeters.",
+        "activity": "Ask students to find all possible rectangles with an area of 36 square units and record each perimeter. Then have them explain which rectangle has the smallest perimeter and why."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "A rectangle on the grid is 4 squares wide and 3 squares tall. How many squares are inside it?"
+      },
+      {
+        "tier": "at",
+        "question": "A rectangle is 8 cm long and 5 cm wide. What is its area and its perimeter?"
+      },
+      {
+        "tier": "above",
+        "question": "A rectangle has an area of 48 square units. If its length is 12 units, what is its perimeter?"
+      }
+    ],
+    "misconception": "Students often confuse the two ideas, using the perimeter units for area or adding side lengths when they should multiply."
+  },
+  {
+    "id": "m7",
+    "band": "Middle School",
+    "grades": "6–8",
+    "concept": "Ratios & proportions",
+    "intro": "A ratio compares two quantities, and a proportion says two ratios are equal, letting us scale amounts up or down fairly.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Understand what a ratio is and write simple part-to-part and part-to-whole ratios.",
+        "activity": "Give students a bag of two-color counters and have them write the ratio of red to blue in three different ways (2:3, 2 to 3, 2/3). Then ask them to add counters to keep the same ratio and record what they did."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Solve proportions to find an unknown value in real-world situations using equivalent ratios.",
+        "activity": "Present a recipe that serves 4 and needs 6 cups of flour, then ask students to find how much flour is needed for 10 servings. Have them set up and solve the proportion 6/4 = x/10 and explain their steps."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Apply proportional reasoning to multi-step problems involving unit rates, scaling, and percent change.",
+        "activity": "Give students two competing store deals (e.g., 12 items for $9 vs. 20 items for $14) and ask which is the better unit rate. Then have them design a third deal that beats both and justify it with proportional reasoning."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "In a fruit bowl there are 3 apples and 5 oranges. Write the ratio of apples to oranges in two different ways."
+      },
+      {
+        "tier": "at",
+        "question": "If 5 pencils cost $2, how much do 15 pencils cost? Set up and solve a proportion."
+      },
+      {
+        "tier": "above",
+        "question": "A map scale is 1 inch = 25 miles. Two cities are 3.5 inches apart on the map. How many miles apart are they, and how far apart would they be at a scale of 1 inch = 40 miles?"
+      }
+    ],
+    "misconception": "Students often add the same number to both parts of a ratio instead of multiplying, breaking the proportional relationship."
+  },
+  {
+    "id": "m8",
+    "band": "Middle School",
+    "grades": "6–8",
+    "concept": "Fractions ↔ decimals",
+    "intro": "Fractions and decimals are two ways to write the same number, and you can convert between them by dividing or by using place value.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Convert simple fractions with denominators of 10 or 100 to decimals and back.",
+        "activity": "Give students a place-value chart and have them write 3/10, 7/10, and 25/100 as decimals. Then read decimals like 0.4 aloud and have them write the matching fraction."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Convert any fraction to a decimal by dividing the numerator by the denominator, including terminating and repeating decimals.",
+        "activity": "Have students divide to convert 3/8, 5/6, and 2/3 into decimals, marking which repeat. Then convert 0.375 and 0.6 back into fractions in lowest terms."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Convert repeating decimals to fractions using algebra and justify why some fractions repeat.",
+        "activity": "Challenge students to convert 0.̄7 and 0.4̅2̅3 to exact fractions using the 'let x equal' method. Then have them predict, before dividing, which of 7/40, 5/12, and 9/25 will terminate and explain their reasoning using prime factors of the denominator."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "Write 9/10 as a decimal, and write 0.7 as a fraction."
+      },
+      {
+        "tier": "at",
+        "question": "Convert 5/8 to a decimal and 0.24 to a fraction in lowest terms."
+      },
+      {
+        "tier": "above",
+        "question": "Convert the repeating decimal 0.̄1̅8 to a fraction in lowest terms and explain each step."
+      }
+    ],
+    "misconception": "Students often line up or move the decimal point incorrectly, treating the numerator or denominator as the decimal instead of actually dividing numerator by denominator."
+  },
+  {
+    "id": "m9",
+    "band": "Middle School",
+    "grades": "6–8",
+    "concept": "One-step equations",
+    "intro": "A one-step equation is a math sentence where you do one operation to find the unknown value that makes both sides equal.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Solve one-step equations with addition and subtraction using small whole numbers.",
+        "activity": "Give students x + 5 = 12 and use counters or a number line to physically remove 5 from both sides. Have them check by putting the answer back into the original equation."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Solve one-step equations using all four operations, including multiplication and division.",
+        "activity": "Present a mix like 4x = 20, x/3 = 6, and x - 7 = 15, and ask students to identify the inverse operation for each before solving. Have them justify why they multiply or divide to isolate the variable."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Solve one-step equations involving fractions, decimals, and negative numbers, then write their own word problems.",
+        "activity": "Give equations like -3x = 4.5 and x + 2/3 = 5/6 and require exact answers as fractions or decimals. Then have each student write a real-world story problem that matches one of their equations and swap with a partner to solve."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "Solve for x: x + 6 = 14"
+      },
+      {
+        "tier": "at",
+        "question": "Solve for x: x/4 = 9"
+      },
+      {
+        "tier": "above",
+        "question": "Solve for x: -2x = 5/3"
+      }
+    ],
+    "misconception": "Students often add or subtract when they should use the inverse operation, or apply the operation to only one side of the equation instead of both."
+  },
+  {
+    "id": "m10",
+    "band": "High School",
+    "grades": "9–12",
+    "concept": "Linear functions",
+    "intro": "A linear function is a rule where a constant rate of change makes a straight line, written as y = mx + b.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Recognize slope and y-intercept from simple equations and graphs.",
+        "activity": "Give students equations like y = 2x + 1 and have them make an input-output table for x = 0, 1, 2, 3. Then plot the points together and confirm they form a straight line."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Write and interpret linear functions from tables, graphs, and word problems.",
+        "activity": "Present a real scenario, such as a phone plan costing $30 plus $0.10 per text, and have students write the function and find the cost for 200 texts. Then ask them to identify what the slope and intercept mean in context."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Compare, transform, and model with linear functions including parallel/perpendicular relationships.",
+        "activity": "Give students two lines and ask them to determine if they are parallel, perpendicular, or neither, then write a new line perpendicular to one passing through a given point. Challenge them to model a piecewise situation and justify where the linear behavior breaks down."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "For y = 3x + 4, what is the slope and what is the y-intercept?"
+      },
+      {
+        "tier": "at",
+        "question": "A gym charges a $50 signup fee plus $20 per month. Write the linear function for total cost and find the cost after 6 months."
+      },
+      {
+        "tier": "above",
+        "question": "Write the equation of the line perpendicular to y = -2x + 5 that passes through the point (4, 1)."
+      }
+    ],
+    "misconception": "Students often confuse the slope and the y-intercept, or think a negative slope means the line is below the x-axis rather than decreasing."
+  },
+  {
+    "id": "m11",
+    "band": "High School",
+    "grades": "9–12",
+    "concept": "Quadratic equations",
+    "intro": "A quadratic equation is one where the highest power of the variable is 2, and its graph forms a U-shaped curve called a parabola.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Solve simple quadratics of the form x² = c or by basic factoring with integer roots.",
+        "activity": "Give students x² - 9 = 0 and x² + 5x + 6 = 0 to solve. Have them check each solution by substituting it back into the original equation."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Solve quadratics by factoring, completing the square, and the quadratic formula, including non-integer solutions.",
+        "activity": "Have students solve 2x² - 4x - 3 = 0 using the quadratic formula, then verify by graphing. Ask them to identify the vertex and axis of symmetry from their work."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Analyze the discriminant, complex roots, and connections between coefficients, roots, and transformations of the parabola.",
+        "activity": "Have students find a value of k so that x² + kx + 9 = 0 has exactly one real solution, then a value giving complex solutions. Ask them to explain their reasoning using the discriminant and Vieta's relationships between roots and coefficients."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "Solve x² - 16 = 0."
+      },
+      {
+        "tier": "at",
+        "question": "Solve 3x² + 5x - 2 = 0 using the quadratic formula."
+      },
+      {
+        "tier": "above",
+        "question": "For what values of k does x² - 6x + k = 0 have no real solutions? Justify using the discriminant."
+      }
+    ],
+    "misconception": "Students often forget that a quadratic can have two solutions, giving only the positive square root or one factor's root instead of both."
+  },
+  {
+    "id": "m12",
+    "band": "High School",
+    "grades": "9–12",
+    "concept": "Intro to probability",
+    "intro": "Probability is a number between 0 and 1 that tells you how likely an event is to happen.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Probability is found by counting favorable outcomes over total equally likely outcomes.",
+        "activity": "Roll a single die 20 times and tally how often you get a 4. Compare your experimental fraction to the theoretical probability of 1/6."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Probability of combined events uses addition for 'or' and multiplication for independent 'and' situations.",
+        "activity": "Draw a card from a standard deck and compute P(king or heart) using the addition rule, adjusting for overlap. Then find P(two hearts in a row) with replacement and without replacement, comparing the results."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Conditional probability measures the chance of an event given that another event has already occurred, using P(A|B)=P(A and B)/P(B).",
+        "activity": "A bag has 4 red and 6 blue marbles; draw two without replacement and compute P(second is red | first is red). Then build a tree diagram and verify your answer against P(both red)/P(first red)."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "A spinner has 8 equal sections, 3 of them green. What is the probability of landing on green?"
+      },
+      {
+        "tier": "at",
+        "question": "You flip a fair coin twice. What is the probability of getting at least one head?"
+      },
+      {
+        "tier": "above",
+        "question": "In a class, 60% study math and 25% study both math and science. If a student studies math, what is the probability they also study science?"
+      }
+    ],
+    "misconception": "Students often add probabilities of events that are not mutually exclusive without subtracting the overlap, or multiply probabilities of events that are not independent."
+  }
+]
