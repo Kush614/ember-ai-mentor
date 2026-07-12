@@ -13,10 +13,44 @@ const PINS_DEFAULT: Pin[] = [
   { emoji: "⏭️", label: "Too easy, skip ahead", q: "Honestly this is too easy, skip ahead", tag: "Self-evolving" },
 ];
 
+// Every student gets bounty-tagged pins tailored to their subject.
+const REMEMBER: Pin = { emoji: "🧠", label: "What do you remember about me?", q: "What do you remember about me?", tag: "Memory Reveal" };
+const RECAP: Pin = { emoji: "🔁", label: "Recap last session", q: "What were we working on last time?", tag: "Cross-session" };
+const SKIP: Pin = { emoji: "⏭️", label: "Too easy, skip ahead", q: "Honestly this is too easy, skip ahead to something harder", tag: "Self-evolving ⏭" };
+
 const PINS_BY_ID: Record<string, Pin[]> = {
+  "leo-g1": [
+    REMEMBER, RECAP,
+    { emoji: "🦕", label: "Count dinosaurs with me", q: "Can you help me count dinosaurs?", tag: "Teach" },
+    { emoji: "✅", label: "I did it myself!", q: "I counted all the way to 100 by myself!", tag: "Self-evolving ↑" },
+    { emoji: "⏭️", label: "Give me a harder one", q: "That was easy! Give me a harder one", tag: "Self-evolving ⏭" },
+  ],
+  "aisha-g4": [
+    REMEMBER, RECAP,
+    { emoji: "🎨", label: "Show 3/4 as a picture", q: "Can you show me 3/4 as a picture?", tag: "Teach" },
+    { emoji: "✅", label: "Oh, I get it now!", q: "Ohh the drawing helped — I get fractions now!", tag: "Self-evolving ↑" },
+    SKIP,
+  ],
+  "maya-r-7g": [
+    REMEMBER, RECAP,
+    { emoji: "⚽", label: "Fraction → decimal", q: "How do I turn a fraction into a decimal?", tag: "Teach" },
+    { emoji: "✅", label: "I passed the quiz!", q: "I passed my Thursday fractions quiz!", tag: "Self-evolving ↑" },
+    SKIP,
+  ],
+  "diego-g8": [
+    REMEMBER, RECAP,
+    { emoji: "🏀", label: "Ratios with basketball", q: "Explain ratios using basketball stats", tag: "Teach" },
+    { emoji: "✅", label: "It clicked!", q: "The basketball thing made ratios click for me!", tag: "Self-evolving ↑" },
+    SKIP,
+  ],
+  "sofia-g10": [
+    REMEMBER, RECAP,
+    { emoji: "🔬", label: "Factor a quadratic", q: "Help me factor x^2 + 5x + 6", tag: "Teach + math" },
+    { emoji: "✅", label: "I feel ready now!", q: "I actually feel ready for my test now!", tag: "Self-evolving ↑" },
+    SKIP,
+  ],
   "marcus-g12": [
-    { emoji: "🧠", label: "What do you remember about me?", q: "What do you remember about me?", tag: "Memory Reveal" },
-    { emoji: "🔁", label: "Recap last session", q: "What were we working on last time?", tag: "Cross-session" },
+    REMEMBER, RECAP,
     { emoji: "📈", label: "Chain rule + formula", q: "Explain the chain rule with the formula and a worked example", tag: "Teach + math" },
     { emoji: "✅", label: "I finally get it!", q: "I finally get the chain rule now — it just clicked!", tag: "Self-evolving ↑" },
     { emoji: "⏭️", label: "Skip to integration", q: "This is too easy, skip ahead to integration by parts", tag: "Self-evolving ⏭" },
