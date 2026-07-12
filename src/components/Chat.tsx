@@ -4,12 +4,34 @@ import Message from "./Message";
 
 const CHIPS = ["Got it", "Show me another", "I'm stuck"];
 
+// Pinned demo prompts — each tagged with the EverMind bounty it shows off.
+interface Pin { emoji: string; label: string; q: string; tag: string }
+
+const PINS_DEFAULT: Pin[] = [
+  { emoji: "🧠", label: "What do you remember about me?", q: "What do you remember about me?", tag: "Memory Reveal" },
+  { emoji: "🔁", label: "Recap last session", q: "What were we working on last time?", tag: "Cross-session" },
+  { emoji: "⏭️", label: "Too easy, skip ahead", q: "Honestly this is too easy, skip ahead", tag: "Self-evolving" },
+];
+
+const PINS_BY_ID: Record<string, Pin[]> = {
+  "marcus-g12": [
+    { emoji: "🧠", label: "What do you remember about me?", q: "What do you remember about me?", tag: "Memory Reveal" },
+    { emoji: "🔁", label: "Recap last session", q: "What were we working on last time?", tag: "Cross-session" },
+    { emoji: "📈", label: "Chain rule + formula", q: "Explain the chain rule with the formula and a worked example", tag: "Teach + math" },
+    { emoji: "✅", label: "I finally get it!", q: "I finally get the chain rule now — it just clicked!", tag: "Self-evolving ↑" },
+    { emoji: "⏭️", label: "Skip to integration", q: "This is too easy, skip ahead to integration by parts", tag: "Self-evolving ⏭" },
+  ],
+};
+
 export default function Chat() {
   const messages = useStore((s) => s.messages);
   const send = useStore((s) => s.sendMessage);
   const mentorBusy = useStore((s) => s.mentorBusy);
+  const learner = useStore((s) => s.learner);
   const [text, setText] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const pins = (learner && PINS_BY_ID[learner.id]) || PINS_DEFAULT;
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -51,6 +73,28 @@ export default function Chat() {
           </div>
         </div>
       )}
+
+      {/* Pinned demo prompts — one click each shows a bounty in action */}
+      <div className="px-6 pb-2">
+        <div className="mx-auto max-w-[640px]">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-slate2/70 mb-1.5">📌 Try — demonstrate the memory</div>
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {pins.map((p) => (
+              <button
+                key={p.q}
+                onClick={() => submit(p.q)}
+                disabled={mentorBusy}
+                title={p.q}
+                className="shrink-0 rounded-full border border-ember/30 bg-ember/[0.07] pl-3 pr-2 py-1.5 text-sm text-ink hover:bg-ember/15 transition flex items-center gap-1.5 disabled:opacity-50"
+              >
+                <span>{p.emoji}</span>
+                <span className="font-medium">{p.label}</span>
+                <span className="text-[9px] font-bold uppercase tracking-wide text-white bg-ember rounded-full px-1.5 py-0.5">{p.tag}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
 
       <div className="px-6 pb-6 pt-1">
         <div className="mx-auto max-w-[640px] flex items-end gap-2 rounded-bubble bg-cloud shadow-day px-4 py-2 border border-transparent focus-within:border-ember/50 transition">
