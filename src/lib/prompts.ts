@@ -24,6 +24,7 @@ VISUAL TOOLS — include a visual in MOST replies, and VARY the type across turn
 - Real photo: [[photo: short description]] — a real Google image (e.g. [[photo: pizza cut into 8 slices]]). Prefer this for real-world objects/places.
 - Video: [[video: short phrase]] — a real explainer video (e.g. [[video: converting fractions to decimals Khan Academy]]).
 - Celebration: [[celebrate]] when they get something right or hit a milestone — sets off a confetti animation.
+- Math formulas: write ALL mathematical notation in LaTeX — inline as $...$ (e.g. $\frac{d}{dx}x^n = n x^{n-1}$) and important standalone formulas as a display block $$...$$. Always use LaTeX for derivatives, integrals, fractions, exponents, and equations so they render beautifully. Do not write formulas as plain ASCII.
 Mix generated images, real photos, videos, and diagrams across the conversation. Never explain or mention this markup. Keep the prose around a visual short.`;
 }
 

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
+import katex from "katex";
 import { celebrate } from "../lib/celebrate";
 import { serpImages, serpVideos, youtubeId } from "../lib/serp";
 
 type Seg =
   | { type: "text"; value: string }
   | { type: "svg"; value: string }
+  | { type: "mathblock"; value: string } // $$ ... $$ display formula
   | { type: "img"; value: string } // AI-generated illustration
   | { type: "photo"; value: string } // real Google image
   | { type: "video"; value: string }
@@ -12,11 +14,36 @@ type Seg =
 
 const PATTERNS: { type: Seg["type"]; re: RegExp }[] = [
   { type: "svg", re: /```svg\s*([\s\S]*?)```/ },
+  { type: "mathblock", re: /\$\$([\s\S]*?)\$\$/ },
   { type: "img", re: /\[\[img:\s*([^\]]+)\]\]/i },
   { type: "photo", re: /\[\[photo:\s*([^\]]+)\]\]/i },
   { type: "video", re: /\[\[video:\s*([^\]]+)\]\]/i },
   { type: "celebrate", re: /\[\[celebrate\]\]/i },
 ];
+
+function renderMath(tex: string, display: boolean): string {
+  try {
+    return katex.renderToString(tex.trim(), { displayMode: display, throwOnError: false });
+  } catch {
+    return tex;
+  }
+}
+
+// Render a text run with inline $...$ math flowing inside it.
+function TextWithMath({ text }: { text: string }) {
+  const parts = text.split(/(\$[^$\n]+?\$)/g);
+  return (
+    <p className="whitespace-pre-wrap leading-relaxed">
+      {parts.map((p, i) =>
+        p.startsWith("$") && p.endsWith("$") && p.length > 2 ? (
+          <span key={i} dangerouslySetInnerHTML={{ __html: renderMath(p.slice(1, -1), false) }} />
+        ) : (
+          <span key={i}>{p}</span>
+        )
+      )}
+    </p>
+  );
+}
 
 function parseRich(content: string): Seg[] {
   const parts: Seg[] = [];
@@ -42,6 +69,8 @@ export function stripMedia(content: string): string {
   return content
     .replace(/```svg[\s\S]*?```/gi, "")
     .replace(/```svg[\s\S]*$/i, "")
+    .replace(/\$\$[\s\S]*?\$\$/g, "")
+    .replace(/\$\$[\s\S]*$/g, "")
     .replace(/\[\[[^\]]*\]\]/g, "")
     .replace(/\[\[[^\]]*$/g, "")
     .trimEnd();
@@ -174,10 +203,15 @@ export default function RichMessage({ content }: { content: string }) {
       {segs.map((s, i) => {
         if (s.type === "text") {
           if (!s.value.trim()) return null;
+          return <TextWithMath key={i} text={s.value.trim()} />;
+        }
+        if (s.type === "mathblock") {
           return (
-            <p key={i} className="whitespace-pre-wrap leading-relaxed">
-              {s.value.trim()}
-            </p>
+            <div
+              key={i}
+              className="my-2 overflow-x-auto text-[17px]"
+              dangerouslySetInnerHTML={{ __html: renderMath(s.value, true) }}
+            />
           );
         }
         if (s.type === "svg") {

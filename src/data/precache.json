@@ -466,5 +466,83 @@
       }
     ],
     "misconception": "Students often add probabilities of events that are not mutually exclusive without subtracting the overlap, or multiply probabilities of events that are not independent."
+  },
+  {
+    "id": "m13",
+    "band": "High School",
+    "grades": "9–12",
+    "concept": "Differentiation",
+    "intro": "Differentiation is the process of finding a derivative, which measures how fast a function's output changes as its input changes.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Use the power rule to find derivatives of simple polynomials.",
+        "activity": "Practice applying d/dx x^n = n*x^(n-1) to terms like x^3 and 5x^2. Then differentiate full polynomials such as 4x^3 + 2x^2 - 7x + 9 term by term."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Apply the product, quotient, and chain rules to differentiate composite and rational functions.",
+        "activity": "Differentiate functions like f(x) = (3x^2 + 1)(x - 4) using the product rule and g(x) = (2x + 5)/(x^2 - 1) using the quotient rule. Then use the chain rule on h(x) = (x^2 + 3)^5."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Use implicit differentiation and combine multiple rules on trigonometric, exponential, and logarithmic functions.",
+        "activity": "Find dy/dx for the implicit equation x^2 + y^2 = sin(xy). Then differentiate f(x) = e^(2x)*ln(x^2 + 1) and interpret where the function's rate of change is greatest."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "Find the derivative of f(x) = 6x^4 - 3x^2 + 8."
+      },
+      {
+        "tier": "at",
+        "question": "Differentiate f(x) = (x^2 - 2x)/(x + 1) using the quotient rule."
+      },
+      {
+        "tier": "above",
+        "question": "Use implicit differentiation to find dy/dx for x^3 + y^3 = 6xy."
+      }
+    ],
+    "misconception": "Students often forget to reduce the exponent by one, writing d/dx x^n = n*x^n instead of n*x^(n-1)."
+  },
+  {
+    "id": "m14",
+    "band": "High School",
+    "grades": "9–12",
+    "concept": "Integration",
+    "intro": "Integration is the process of finding a function whose derivative is given, which also measures the accumulated area under a curve.",
+    "tiers": [
+      {
+        "level": "Below grade level",
+        "summary": "Reverse the power rule to find basic antiderivatives of simple polynomials.",
+        "activity": "Practice integrating single-term expressions like integral of x^2 dx = x^3/3 + C, always remembering the constant of integration. Check each answer by differentiating it back to the original."
+      },
+      {
+        "level": "At grade level",
+        "summary": "Evaluate definite integrals of polynomials and basic trig functions using the Fundamental Theorem of Calculus.",
+        "activity": "Compute integrals such as the integral from 0 to 2 of (3*x^2 + 2*x) dx by finding the antiderivative and evaluating F(b) - F(a). Then interpret the result as the net area between the curve and the x-axis."
+      },
+      {
+        "level": "Above grade level",
+        "summary": "Apply substitution and integration by parts to evaluate more complex definite and indefinite integrals.",
+        "activity": "Solve integrals like the integral of x*e^x dx using integration by parts and the integral of 2*x*(x^2+1)^3 dx using u-substitution. Then set up an integral that computes the volume of a solid of revolution and evaluate it."
+      }
+    ],
+    "exit_tickets": [
+      {
+        "tier": "below",
+        "question": "Find the integral of 4*x^3 dx."
+      },
+      {
+        "tier": "at",
+        "question": "Evaluate the integral from 1 to 3 of (2*x + 1) dx."
+      },
+      {
+        "tier": "above",
+        "question": "Use integration by parts to evaluate the integral of x*cos(x) dx."
+      }
+    ],
+    "misconception": "Students frequently forget to add the constant of integration C when finding an indefinite integral."
   }
 ]
